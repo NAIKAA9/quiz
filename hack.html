@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz with Timer</title>
+    <link rel="stylesheet" href="hack.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧠 Timed Quiz (10s per question)</h1>
+
+      <div id="start-screen">
+        <input type="text" id="username" placeholder="Enter your name" />
+        <button onclick="startQuiz()">Start Quiz</button>
+      </div>
+
+      <div id="quiz-screen" class="hide">
+        <div id="question">Question here</div>
+        <div id="timer">⏱️ Time Left: <span id="time">10</span>s</div>
+        <div id="options"></div>
+      </div>
+
+      <div id="result-screen" class="hide">
+        <h2>✅ Quiz Finished!</h2>
+        <p id="final-score"></p>
+        <button onclick="showLeaderboard()">View Leaderboard</button>
+      </div>
+
+      <div id="leaderboard-screen" class="hide">
+        <h2>🏆 Leaderboard</h2>
+        <ul id="leaderboard"></ul>
+        <button onclick="restartQuiz()">Restart</button>
+      </div>
+    </div>
+
+    <script src="hack.js"></script>
+  </body>
+</html>
